@@ -1,5 +1,5 @@
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import AboutPage from './pages/AboutPage';
@@ -11,7 +11,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import MyStackPage from './pages/MyStackPage';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: '/',
         element: <MainLayout />,
