@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply text-night;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+
+    background-image: url("./assets/images/background.svg");
+    background-size: 324%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left 32% top 92px;
+    animation: 1250ms ease-out 0s 1 bg-slide;
+}
+
+.card {
+    perspective: 800px;
+}
+
+.card__content {
+    transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+    transform: rotateY(.5turn);
+}
+
+.card__front,
+.card__back {
+    backface-visibility: hidden;
+}
+
+.card__back {
+    transform: rotateY(.5turn);
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: 880px;
+        background-position: left -200px top 92px;
+        animation: 1250ms ease-out 0s 1 bg-slide-768px;
+    }
+
+    @keyframes bg-slide-768px {
+        0% {
+            background-position: left 64px top 92px;
+        }
+    
+        100% {
+            background-position: left -200px top 92px;
+        }
+    }
+}
+
+@keyframes bg-slide {
+    0% {
+        background-position: left -64% top 92px;
+    }
+
+    100% {
+        background-position: left 32% top 92px;
+    }
+}
