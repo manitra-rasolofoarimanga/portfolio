@@ -47,7 +47,7 @@ const careerPathCards: CareerPathCardProps[] = [
         label: "Master 2 - Mobiquité, Big Data et Intégration de Systèmes (MBDS)",
         addresse: "Université Côte d’Azur, Nice France",
         description: "I've just started my Master 2 degree, where I'll be developing skills in Big Data and Data Analysis, focusing on Cloud and Information Systems Administration, while strengthening my skills in Backend and Cybersecurity. I'll also be exploring Frontend and the Internet of Things (IoT). Finally, I'll be training in Project Management, as well as Entrepreneurship and Communication, to master the technical and strategic aspects of solution development.",
-        startDate: { month: 12, year: 2023 },
+        startDate: { month: 9, year: 2024 },
         endDate: null,
     },
 ];
