@@ -44,7 +44,7 @@ body {
     body {
         background-size: 880px;
         background-position: left -200px top 92px;
-        animation: 1250ms ease-out 0s 1 bg-slide-768px;
+        animation: none;
     }
 
     @keyframes bg-slide-768px {

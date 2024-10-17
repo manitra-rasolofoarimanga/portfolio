@@ -9,7 +9,7 @@ const HeroSection = () => {
                     shadow={false}
                     floated={false}
                     className="mx-8 lg:m-0 lg:w-2/5 lg:me-8 shrink-0 max-h-[424px] rounded-xl shadow-md bg-transparent hover:skew-y-1"
-                    data-aos={window.innerWidth >= 960 ? "fade-right" : ""}
+                    {...(window.innerWidth >= 960 && { "data-aos": "fade-right" })}
                 >
                     <img
                         src={portrait}
@@ -19,7 +19,7 @@ const HeroSection = () => {
                 </CardHeader>
                 <CardBody 
                     className="flex items-center"
-                    data-aos={window.innerWidth >= 960 ? "fade-left" : "zoom-in"}
+                    {...(window.innerWidth >= 960 && { "data-aos": "fade-left" })}
                 >
                     <div>
                         <Typography variant="h6" color="gray" className="mb-4 text-center lg:text-left">
