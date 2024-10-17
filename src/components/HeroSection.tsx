@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardBody, Typography, Button, } from "@material-tailwind/react";
-import portrait from "../assets/images/portrait.png";
+import portrait from "../assets/images/portrait.webp";
 
 const HeroSection = () => {
     return (
@@ -29,7 +29,12 @@ const HeroSection = () => {
                             Fullstack Developer
                         </Typography>
                         <Typography color="gray" className="mb-8 font-normal text-center lg:text-left">
-                            from Madagascar. I'll start my final year of Master's studies soon and am deeply passionate about programming.<br /> Find out more about me by clicking on the button below.
+                            from Madagascar. I'm currently pursuing a Master 2 with the Université Côte d'Azur in Nice, France. 
+                            <br /> 
+                            A passionate developer, I'm increasingly specializing in Machine Learning, with a growing expertise in this field. 
+                            My background reflects a strong interest in IT development and cutting-edge technologies.
+                            <br /> 
+                            Find out more about me by clicking on the button below.
                         </Typography>
                         <div className="flex lg:inline-block justify-center lg:justify-normal w-full lg:w-auto">
                             <a href="/portfolio/cv-manitra_rasolofoarimanga.pdf" target="_blank" rel="noopener noreferrer">

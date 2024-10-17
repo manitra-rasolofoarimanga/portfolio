@@ -98,6 +98,7 @@ const Header = () => {
                 <IconButton
                     variant="text"
                     className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+                    aria-label="Ouvrir le menu"
                     ripple={false}
                     onClick={() => setOpenNav(!openNav)}
                 >

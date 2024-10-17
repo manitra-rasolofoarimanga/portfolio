@@ -26,7 +26,7 @@ const CareerPathCard: React.FC<CareerPathCardProps> = ({ category, label, addres
                     </span>
                 </div> 
                 <Typography color="gray" className="mt-2 font-normal text-center lg:text-left">
-                    {description}
+                    {description || ""}
                 </Typography>
             </div>
         </div>
