@@ -89,7 +89,7 @@ const Header = () => {
         <Navbar className={`sticky top-0 z-50 px-6 pt-8 pb-3 shadow-none bg-beige rounded-none border-none transition-transform duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="flex items-center justify-between text-blue-gray-900">
                 <NavLink className="font-extrabold text-[20px] flex items-center" to="/">
-                    <img src={logo} alt="Manitra RASOLOFOARIMANGA's Logo" className="me-2" width="36px" height="36px" />
+                    <img src={logo} alt="Manitra RASOLOFOARIMANGA's Logo" loading="lazy" className="me-2" width="36px" height="36px" />
                     <span className="text-wenge font-extrabold hidden lg:block">Manitra R.</span>
                 </NavLink>
                 <div className="hidden lg:block">
