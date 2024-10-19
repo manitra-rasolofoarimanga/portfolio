@@ -11,12 +11,12 @@ const HeroSection = () => {
                     className="mx-8 lg:m-0 lg:w-2/5 lg:me-8 shrink-0 max-h-[424px] rounded-xl shadow-md bg-transparent hover:skew-y-1"
                     data-aos={window.innerWidth >= 960 ? "fade-right" : ""}
                 >
-                    <img
+                    {/* <img
                         src={portrait}
                         alt="card-image"
                         loading="lazy"
                         className="h-[424px] w-full object-cover transform transition-transform duration-500 hover:scale-110"
-                    />
+                    /> */}
                 </CardHeader>
                 <CardBody 
                     className="flex items-center"
