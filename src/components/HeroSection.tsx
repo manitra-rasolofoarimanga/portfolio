@@ -9,7 +9,7 @@ const HeroSection = () => {
                     shadow={false}
                     floated={false}
                     className="mx-8 lg:m-0 lg:w-2/5 lg:me-8 shrink-0 max-h-[424px] rounded-xl shadow-md bg-transparent hover:skew-y-6"
-                    data-aos={window.innerWidth >= 960 ? "fade-right" : "fade"}
+                    data-aos={window.innerWidth >= 960 ? "fade-right" : ""}
                 >
                     <img
                         src={portrait}
