@@ -2,6 +2,7 @@ import type { SVGProps } from "react";
 import { Typography } from "@material-tailwind/react"
 import { ContactCardProps } from "../types/contact";
 import ContactCard from "../components/ContactCard";
+import { Helmet } from "react-helmet-async";
 
 const contacts: ContactCardProps[] = [
     {
@@ -33,26 +34,34 @@ const contacts: ContactCardProps[] = [
 
 const ContactPage = () => {
     return (
-        <div className="min-h-[88vh] mx-auto grid place-items-center text-center lg:px-8">
-            <div className="px-2 pt-8">
-                <Typography
-                    data-aos="zoom-in-down"
-                    variant="h1"
-                    color="blue-gray"
-                    className="text-wenge font-bold !text-3xl !leading-snug md:!text-4xl"
-                >
-                    Contact Me
-                </Typography>
-                <Typography data-aos="zoom-in" className="mt-8 mb-14 font-normal text-gray-500 mx-auto">
-                    Don't hesitate to reach out to me directly if you have any questions or need assistance. As a Fullstack Developer, I'm here to tackle any coding challenges or tech issues you might have.
-                </Typography>
-                <div className="grid-cols-none lg:grid lg:grid-cols-2 lg:px-8">
-                    { contacts.map((contact, index) => {
-                        return <ContactCard key={index} {...contact} />
-                    } )}
-                </div> 
+        <>
+            <Helmet>
+                <title>Contact Manitra RASOLOFOARIMANGA | Fullstack Developer</title>
+                <meta name="description" content="Contact Manitra RASOLOFOARIMANGA, a passionate Fullstack Developer from Madagascar, to learn more about his skills and projects or for collaboration opportunities." />
+                <meta name="keywords" content="Contact, Manitra RASOLOFOARIMANGA, Fullstack Developer, Machine Learning, Collaborations, Madagascar, France" />
+            </Helmet>
+
+            <div className="min-h-[88vh] mx-auto grid place-items-center text-center lg:px-8">
+                <div className="px-2 pt-8">
+                    <Typography
+                        data-aos="zoom-in-down"
+                        variant="h1"
+                        color="blue-gray"
+                        className="text-wenge font-bold !text-3xl !leading-snug md:!text-4xl"
+                    >
+                        Contact Me
+                    </Typography>
+                    <Typography data-aos="zoom-in" className="mt-8 mb-14 font-normal text-gray-500 mx-auto">
+                        Don't hesitate to reach out to me directly if you have any questions or need assistance. As a Fullstack Developer, I'm here to tackle any coding challenges or tech issues you might have.
+                    </Typography>
+                    <div className="grid-cols-none lg:grid lg:grid-cols-2 lg:px-8">
+                        { contacts.map((contact, index) => {
+                            return <ContactCard key={index} {...contact} />
+                        } )}
+                    </div> 
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Navbar, Collapse, Typography, IconButton, } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/logo.webp";
 
 const NavList = () => {
     return (

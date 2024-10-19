@@ -1,16 +1,17 @@
 import { Typography } from "@material-tailwind/react"
 import ProjectCard from '../components/ProjectCard';
 import { ProjectCardProps } from "../types/project";
-import amitDashboard from "../assets/images/amit-dashboard.png";
-import searchlinksDashboard from "../assets/images/searchlinks-dashboard.png";
-import symfony from "../assets/images/symfony.svg";
-import angular from "../assets/images/angular.svg";
-import postgresql from "../assets/images/postgresql.svg";
-import bootstrap from "../assets/images/bootstrap.svg";
-import materialui from "../assets/images/materialui.svg";
-import mysql from "../assets/images/mysql.svg";
-import php from "../assets/images/php.svg";
-import jquery from "../assets/images/jquery.svg";
+import amitDashboard from "../assets/images/projects/amit-dashboard.webp";
+import searchlinksDashboard from "../assets/images/projects/searchlinks-dashboard.webp";
+import symfony from "../assets/images/stacks/symfony.svg";
+import angular from "../assets/images/stacks/angular.svg";
+import postgresql from "../assets/images/stacks/postgresql.svg";
+import bootstrap from "../assets/images/stacks/bootstrap.svg";
+import materialui from "../assets/images/stacks/materialui.svg";
+import mysql from "../assets/images/stacks/mysql.svg";
+import php from "../assets/images/stacks/php.svg";
+import jquery from "../assets/images/stacks/jquery.svg";
+import { Helmet } from "react-helmet-async";
 
 const projectCards: ProjectCardProps[] = [
     {
@@ -67,26 +68,34 @@ const projectCards: ProjectCardProps[] = [
 
 const ProjectsPage = () => {
     return (
-        <div className="min-h-[88vh] mx-auto grid place-items-center text-center lg:px-8">
-            <div className="px-8 pt-8">
-                <Typography
-                    data-aos="zoom-in-down"
-                    variant="h1"
-                    color="blue-gray"
-                    className="text-wenge font-bold !text-3xl !leading-snug md:!text-4xl"
-                >
-                    Projects
-                </Typography>
-                <Typography data-aos="zoom-in" className="mt-8 font-normal text-gray-500 mx-auto">
-                    Here is a selection of my work, showcasing two standout projects that highlight my skills and experience across various domains.
-                </Typography>
+        <>
+            <Helmet>
+                <title>Projects by Manitra RASOLOFOARIMANGA | Fullstack Developer</title>
+                <meta name="description" content="Explore the projects of Manitra RASOLOFOARIMANGA, showcasing his Fullstack development skills" />
+                <meta name="keywords" content="Projects, Manitra RASOLOFOARIMANGA, Fullstack Developer, Development, Web Applications, Project Portfolio" />
+            </Helmet>
+            
+            <div className="min-h-[88vh] mx-auto grid place-items-center text-center lg:px-8">
+                <div className="px-8 pt-8">
+                    <Typography
+                        data-aos="zoom-in-down"
+                        variant="h1"
+                        color="blue-gray"
+                        className="text-wenge font-bold !text-3xl !leading-snug md:!text-4xl"
+                    >
+                        Projects
+                    </Typography>
+                    <Typography data-aos="zoom-in" className="mt-8 font-normal text-gray-500 mx-auto">
+                        Here is a selection of my work, showcasing two standout projects that highlight my skills and experience across various domains.
+                    </Typography>
+                </div>
+                <div className="lg:grid gap-2 grid-cols-2">
+                    {projectCards.map((project, index) =>(
+                        <ProjectCard key={index} {...project} />
+                    ))}
+                </div>
             </div>
-            <div className="lg:grid gap-2 grid-cols-2">
-                {projectCards.map((project, index) =>(
-                    <ProjectCard key={index} {...project} />
-                ))}
-            </div>
-        </div>
+        </>
     )
 }
 

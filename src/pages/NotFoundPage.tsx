@@ -1,12 +1,12 @@
 import { Typography, Button } from "@material-tailwind/react";
-import { FaceFrownIcon } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router-dom";
+import notFoundImg from "../assets/images/not-found.webp";
 
 const NotFoundPage = () => {
     return (
         <div className="h-[90vh] mx-auto grid place-items-center text-center px-8">
             <div className="p-8">
-                <FaceFrownIcon className="w-24 h-24 mx-auto" />
+                <img src={notFoundImg} alt="Disappointed John Travolta" width={"350px"} height={"340px"} />
                 <Typography
                     variant="h1"
                     color="blue-gray"

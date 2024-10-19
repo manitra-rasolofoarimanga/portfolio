@@ -1,15 +1,16 @@
 
 import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
 import MainLayout from './layouts/MainLayout';
-import { useEffect } from 'react';
+import MyStackPage from './pages/MyStackPage';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-import MyStackPage from './pages/MyStackPage';
 
 const router = createHashRouter([
     {
@@ -54,7 +55,9 @@ const App = () => {
     }, []);
     
     return (
-        <RouterProvider router={router} />
+        <HelmetProvider>
+            <RouterProvider router={router} />
+        </HelmetProvider>
     )
 }
 
