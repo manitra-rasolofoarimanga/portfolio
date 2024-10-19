@@ -15,7 +15,9 @@ const HeroSection = () => {
                         src={portrait}
                         alt="card-image"
                         loading="lazy"
-                        className="h-[424px] w-full object-cover transform transition-transform duration-500 hover:scale-110"
+                        className="h-[450px] w-full object-cover transform transition-transform duration-500 hover:scale-110"
+                        width={"300px"}
+                        height={"450px"}
                     />
                 </CardHeader>
                 <CardBody 
