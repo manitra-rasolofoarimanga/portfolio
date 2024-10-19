@@ -19,6 +19,13 @@ body {
     animation: 1250ms ease-out 0s 1 bg-slide;
 }
 
+.my-portrait {
+    background-image: url("./assets/images/portrait.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
 .card {
     perspective: 800px;
 }
